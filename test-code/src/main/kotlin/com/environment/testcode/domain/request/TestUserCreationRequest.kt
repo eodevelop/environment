@@ -1,12 +1,12 @@
 package com.environment.testcode.domain.request
 
-import com.environment.testcode.domain.entity.User
+import com.environment.testcode.domain.entity.TestUser
 
-data class UserCreationRequest (
+data class TestUserCreationRequest (
     val name: String,
     val email: String
 ) {
-    fun toUser() = User(
+    fun toUser() = TestUser(
         name = name,
         email = email
     )

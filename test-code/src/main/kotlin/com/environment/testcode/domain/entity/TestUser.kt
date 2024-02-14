@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 
 @Entity
-data class User (
+data class TestUser (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = 0,
