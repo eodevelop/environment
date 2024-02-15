@@ -6,3 +6,11 @@ Content-Type: application/json
   "name": "John Doe",
   "email": "john.doe@example.com"
 }
+
+### CreateUser API 데이터 없는 경우 테스트
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com"
+}
