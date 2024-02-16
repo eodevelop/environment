@@ -5,7 +5,7 @@ import com.environment.testcode.repository.TestUserRepository
 import org.junit.jupiter.api.extension.ExtendWith
 import io.mockk.every
 import io.mockk.mockk
-import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.mockito.junit.jupiter.MockitoExtension
 
@@ -14,7 +14,7 @@ class TestUserServiceTest {
 
     private val testUserRepository = mockk<TestUserRepository>()
 
-    private val testUserService = mockk<TestUserService>()
+    private val testUserService = TestUserService(testUserRepository)
 
     @Test
     fun `saveUser - 유저 저장 후 유저 정보를 반환한다`() {
@@ -26,6 +26,6 @@ class TestUserServiceTest {
         val result = testUserService.saveUser(testUser)
 
         // then
-        Assertions.assertEquals(testUser, result)
+        assertEquals(testUser, result)
     }
 }
