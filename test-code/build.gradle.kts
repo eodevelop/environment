@@ -31,10 +31,12 @@ dependencies {
 
 	// JUnit Jupiter
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
-	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
-	testImplementation("io.mockk:mockk:1.12.0")
-	testImplementation("org.testcontainers:mysql:1.16.2")
+	testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
+	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.2")
+	testImplementation("io.mockk:mockk:1.13.4")
+	testImplementation("org.testcontainers:mysql:1.17.6")
+	testImplementation("org.testcontainers:junit-jupiter:1.17.6")
+	runtimeOnly("mysql:mysql-connector-java:8.0.33")
 
 	// QueryDSL 설정
 	implementation ("com.querydsl:querydsl-jpa:5.0.0:jakarta")
